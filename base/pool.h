@@ -21,7 +21,7 @@ struct poolmgr;
  * alignment is align number,
  * num is initialize block num,
  * next_multiple is next num,
- *		the next num is num * next_multiple, if next_multiple is zero, then only has one sub pool. 
+ *		the next num is num * next_multiple, if next_multiple is zero, then only has one sub pool.
  * name is poolmgr name.
  */
 struct poolmgr *poolmgr_create(size_t size, size_t alignment, 
@@ -35,7 +35,7 @@ void *poolmgr_alloc_object(struct poolmgr *self);
 
 void poolmgr_free_object(struct poolmgr *self, void *bk);
 
-void poolmgr_getinfo(struct poolmgr *self, char *buf, size_t bufsize);
+void poolmgr_get_info(struct poolmgr *self, char *buf, size_t bufsize);
 
 #ifdef __cplusplus
 }

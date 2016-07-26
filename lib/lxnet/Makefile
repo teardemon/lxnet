@@ -29,7 +29,7 @@ SRC_INCS = -I"./../../base/" -I"./src/buf/" -I"./src/event/" -I"./src/sock/" -I"
 SRC_LIBS = 
 
 
-C_SRC_ALL = $(wildcard  ./*.c ./../../base/crosslib.c ./../../base/log.c ./../../base/pool.c ./../../base/catomic.c ./../../base/cthread.c ./../../base/cthread_pool.c ./../../base/buf/*.c ./src/buf/*.c ./src/event/net_module.c ./src/event/net_eventmgr.c ./src/sock/*.c ./../../3rd/quicklz/*.c)
+C_SRC_ALL = $(wildcard ./*.c ./../../base/crosslib.c ./../../base/log.c ./../../base/pool.c ./../../base/catomic.c ./../../base/cthread.c ./../../base/cthread_pool.c ./../../base/buf/*.c ./src/buf/*.c ./src/event/net_module.c ./src/event/net_eventmgr.c ./src/sock/*.c ./../../3rd/quicklz/*.c)
 
 CXX_SRC_ALL = $(wildcard ./*.cpp)
 
@@ -44,10 +44,10 @@ none:
 
 
 win-debug:
-	$(MAKE) all EXTRA_CFLAGS="-Wall -march=i686 -DWIN32 -DDEBUG -g" EXTRA_CXXFLAGS="-Wall -march=i686 -DWIN32 -DDEBUG -g"
+	$(MAKE) all EXTRA_CFLAGS="-Wall -march=i686 -D_WIN32 -DDEBUG -g" EXTRA_CXXFLAGS="-Wall -march=i686 -D_WIN32 -DDEBUG -g"
 
 win-release:
-	$(MAKE) all EXTRA_CFLAGS="-Wall -march=i686 -DWIN32 -DNDEBUG -O2" EXTRA_CXXFLAGS="-Wall -march=i686 -DWIN32 -DNDEBUG -O2"
+	$(MAKE) all EXTRA_CFLAGS="-Wall -march=i686 -D_WIN32 -DNDEBUG -O2" EXTRA_CXXFLAGS="-Wall -march=i686 -D_WIN32 -DNDEBUG -O2"
 
 
 linux-debug:
